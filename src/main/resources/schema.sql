@@ -29,9 +29,9 @@ create table if not exists role (
   unique key name (name)
 ) engine=innodb ;
 
-create table if not exists  user  (
+create table if not exists  user (
   id int(11) not null auto_increment,
-  user_name varchar(100) not null,
+  username varchar(100) not null,
   password varchar(1024) not null,
   email varchar(1024) not null,
   enabled tinyint(4) not null,
@@ -39,7 +39,7 @@ create table if not exists  user  (
   credentialsNonExpired tinyint(4) not null,
   accountNonLocked tinyint(4) not null,
   primary key (id),
-  unique key user_name (user_name)
+  unique key username (username)
 ) engine=innodb ;
 
 
